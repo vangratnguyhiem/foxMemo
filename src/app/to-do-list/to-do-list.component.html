@@ -1,0 +1,75 @@
+<img src="http://pluspng.com/img-png/animal-logo-png-animal-logos-by-ivan-bobrov-600.png" alt="octopus">
+<h3>QUICK MEMO & TODO LIST</h3>
+<p>What are you planning?</p>
+<div class="input-group mb-3">
+  <input
+    class="form-control"
+    [(ngModel)]="txtThing"
+    name="txtThing"
+  />
+  <div class="input-group-append">
+    <button 
+      class="btn btn-outline-secondary" 
+      (click)="addThing();"
+    >
+      + 
+    </button>
+  </div>
+</div>
+<form> 
+  <div *ngFor="let thing of things.reverse(); ">
+    <div class="row" *ngIf="!thing.checkOption">
+      <div class="col-9">
+        <label class="container">
+          {{thing.name}}
+          <input 
+            type="checkbox" 
+            class="checkbox" 
+            [value]="!thing.checkOption"
+            (change)="listThingService.checkValue(thing._id, !thing.checkOption)"
+          >
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="col-3">
+        <button 
+          class="trashButton"
+          (click)="listThingService.removeThing(thing._id)"
+        >
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let thing of things">
+    <div class="row" *ngIf="thing.checkOption">
+      <div class="col-9">
+        <label 
+          class="container" 
+          style="text-decoration: line-through; color: grey"
+        >
+        {{thing.name}}
+          <input 
+            type="checkbox" 
+            [checked]="thing.checkOption"
+            [value]="thing.checkOption"
+            (change)="listThingService.checkValue(thing._id, !thing.checkOption)"
+          >
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="col-3">
+        <button 
+          class="trashButton"
+          (click)="listThingService.removeThing(thing._id)"
+        >
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+<!-- Copyright -->
+<div class="footer">
+  <p>Copyright &copy; 2018 - My very first step</p>
+</div><!--#footer-->
