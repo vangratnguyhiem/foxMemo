@@ -102,7 +102,6 @@ p {
 .trashButton{ 
     background-color: transparent;
     border: none;
-    padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
     color:#402D19
@@ -119,12 +118,3 @@ p {
     width: 100%;
     position: relative;
 } */
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  color: white;
-  text-align: center;
-}

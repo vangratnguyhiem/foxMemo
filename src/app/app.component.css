@@ -1,0 +1,28 @@
+/* .footer {
+    position: fixed;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: #402D19;
+    text-align: center;
+    font-family: 'papyrus'
+} */
+footer, .container{ 
+    display: block; 
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+
+footer p { 
+    color: #402D19;
+    text-align: center;
+    font-family: 'papyrus'
+}
