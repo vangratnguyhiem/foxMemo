@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store'; 
 import { Http } from '@angular/http'
 
-// const URL = 'https://to-do-list001.herokuapp.com'
+// const URL = 'https://fox-memo.herokuapp.com'
 
 const URL = 'http://localhost:3000'
 
