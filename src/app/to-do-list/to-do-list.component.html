@@ -1,4 +1,4 @@
-<img src="http://pluspng.com/img-png/animal-logo-png-animal-logos-by-ivan-bobrov-600.png" alt="octopus">
+<img src="http://pluspng.com/img-png/animal-logo-png-animal-logos-by-ivan-bobrov-600.png" alt="fox">
 <h3>QUICK MEMO & TODO LIST</h3>
 <p>What are you planning?</p>
 <div class="input-group mb-3">
@@ -6,6 +6,7 @@
     class="form-control"
     [(ngModel)]="txtThing"
     name="txtThing"
+    (keyup.enter)="addThing();"
   />
   <div class="input-group-append">
     <button 
@@ -16,6 +17,7 @@
     </button>
   </div>
 </div>
+<!-- TASK FORM -->
 <form> 
   <div *ngFor="let thing of things.reverse(); ">
     <div class="row" *ngIf="!thing.checkOption">
@@ -69,3 +71,6 @@
     </div>
   </div>
 </form>
+<div class="footer">
+  <p>Copyright &copy; 2018 - My very first step</p>
+</div>
